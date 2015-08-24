@@ -8,6 +8,25 @@
     <title>Nashville Software School</title>
   </head>
   <body>
+    <div class="container-flow">
+      <div class="row">
+        <div id="red-player" class="col-xs-5">
+          <!-- Red Player side -->
+        </div>
+        <div id="battle-result" class="col-xs-2">
+          <!-- Result of the batle -->
+          <div>
+            <button id="draw" class="btn btn-default hidden">DRAW!</button>
+            <button id="newgame" class="btn btn-default">&nbsp;&nbsp;&nbsp;New Game&nbsp;&nbsp;&nbsp;</button>
+            <button id="resume" class="btn btn-default">Resume Game</button>
+            <button id="stats" class="btn btn-default">&nbsp;&nbsp;Player Stats&nbsp;&nbsp;</button>
+          </div>
+        </div>
+        <div id="blue-player" class="col-xs-5">
+          <!-- Blue Player side -->
+        </div>
+      </div>
+    </div>
     <script data-main="./javascripts/main" src="lib/bower_components/requirejs/require.js"></script>
   </body>
 </html>

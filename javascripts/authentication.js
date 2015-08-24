@@ -1,7 +1,7 @@
 define(function(require) {
   var firebase = require("firebase");
   var uid = require("uid");
-  var ref = new Firebase("https://sizzling-torch-4887.firebaseio.com");
+  var ref = new Firebase("https://nss-card-war.firebaseio.com");
   var authData = ref.getAuth();
   if(authData === null) {
     ref.authWithOAuthPopup("github", function(error, authData) {
@@ -9,12 +9,12 @@ define(function(require) {
         console.log("Login Failed!", error);
       } else {
         uid.setUid(authData.uid);
-        require(["scaffold"], function() {});
+        require(["newgame"], function() {});
       }
     },
     {remember: "sessionOnly"});
   } else {
     uid.setUid(authData.uid);
-    require(["scaffold"], function() {});
+    require(["newgame"], function() {});
   }
 });
