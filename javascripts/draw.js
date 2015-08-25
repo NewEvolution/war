@@ -7,6 +7,7 @@ define(function(require) {
 
   $("#draw").click(function(e) {
     $("#wartext").addClass("invisible");
+    $(".score").removeClass("invisible");
     var redDeck;
     var blueDeck;
     var deferred = Q.defer();
@@ -21,8 +22,12 @@ define(function(require) {
     cardsPromise.then(function(cards) {
       var numToDraw;
       if($("#draw").html() === "DRAW!") {
+        $(".red-card").addClass("hidden");
+        $(".blue-card").addClass("hidden");
         numToDraw = 1;
       } else {
+        $(".red-card").removeClass("hidden");
+        $(".blue-card").removeClass("hidden");
         numToDraw = 4;
       }
       var redCardPromise = card.draw(cards.redDeck, numToDraw);

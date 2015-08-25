@@ -36,6 +36,8 @@ define(function(require) {
         var redPromise = pile.addCards(wonCards, bothCards.redCard.deck_id);
         redPromise.then(function(data) {
           redScore = data.piles.winnings.remaining;
+          console.log("red win", data);
+          $("#redCard-score").html(redScore);
         });
       } else if(redVal < blueVal) {
         $("#draw").html("DRAW!");
@@ -43,6 +45,8 @@ define(function(require) {
         var bluePromise = pile.addCards(wonCards, bothCards.blueCard.deck_id);
         bluePromise.then(function(data) {
           blueScore = data.piles.winnings.remaining;
+          console.log("blue win", data);
+          $("#blueCard-score").html(blueScore);
         });
       } else if(redVal === blueVal) {
         $("#wartext").removeClass("invisible");

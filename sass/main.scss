@@ -1,6 +1,11 @@
 body {
+  background: #222 url(../images/battle-bg.jpg) no-repeat 50% 50% fixed;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
   text-align: center;
-  color: black;
+  color: white;
+  padding-top: 10%
 }
 
 .hidden {
@@ -8,29 +13,54 @@ body {
 }
 
 #wartext {
+  color: black;
   font-weight: bold;
   font-size: 10em;
   text-shadow: 0 0 15px rgb(255,0,0), 0 0 15px rgb(255,0,0), 0 0 15px rgb(255,0,0);
 }
 
-#blueCard-card,
-#redCard-card {
+.blue-card,
+#blueCard-card {
   position: absolute;
   top: 2em;
-}
-
-#blueCard-card {
   left: 30px;
   -ms-transform: rotate(-10deg); /* IE 9 */
   -webkit-transform: rotate(-10deg); /* Chrome, Safari, Opera */
   transform: rotate(-10deg);
 }
 
+.b {
+  left: 55px;
+}
+
+.c {
+  left: 80px;
+}
+
+.d {
+  left: 105px;
+}
+
+.red-card,
 #redCard-card {
+  position: absolute;
+  top: 2em;
   right: 30px;
   -ms-transform: rotate(10deg); /* IE 9 */
   -webkit-transform: rotate(10deg); /* Chrome, Safari, Opera */
   transform: rotate(10deg);
+}
+
+.f {
+  right: 55px;
+}
+
+.g {
+  right: 80px;
+}
+
+.h {
+  right: 105px;
 }
 
 #battle-result {
@@ -38,12 +68,38 @@ body {
   font-size: 2.5em;
   #redCard-name {
     color: red;
-    text-shadow: 1px 1px 2px rgba(20,20,20,1);
+    text-shadow: 1px 1px 2px rgba(255,255,255,1);
     font-weight: bold;
   }
   #blueCard-name {
     color: blue;
-    text-shadow: 1px 1px 2px rgba(20,20,20,1);
+    text-shadow: 1px 1px 2px rgba(255,255,255,1);
     font-weight: bold;
   }
+  #qualifier {
+    text-shadow: 1px 1px 2px rgba(20,20,20,1);
+  }
+}
+
+.score {
+  position: absolute;
+  top: 350px;
+  font-size: 6em;
+  font-weight: bold;
+}
+
+#redCard-score {
+  color: red;
+  text-shadow: 1px 1px 2px rgba(255,255,255,1);
+}
+
+#blueCard-score {
+  color: blue;
+  text-shadow: 1px 1px 2px rgba(255,255,255,1);
+}
+
+#win-announcement {
+  margin: 30px 0;
+  font-weight: bold;
+  font-size: 3em;
 }

@@ -8,6 +8,8 @@ define(function(require) {
   var drawButton = require("draw");
   
   $("#newgame").click(function(e) {
+    $(".red-card").addClass("hidden");
+    $(".blue-card").addClass("hidden");
     var blueDeck = deck.newDeck();
     var redDeck = deck.newDeck();
     var thisGame = {};
