@@ -6,6 +6,7 @@ define(function(require) {
   var gameRef = require("gameref");
 
   $("#draw").click(function(e) {
+    $("#wartext").addClass("invisible");
     var redDeck;
     var blueDeck;
     var deferred = Q.defer();
@@ -18,8 +19,14 @@ define(function(require) {
       deferred.resolve(cards);
     });
     cardsPromise.then(function(cards) {
-      var redCardPromise = card.draw(cards.redDeck, 1);
-      var blueCardPromise = card.draw(cards.blueDeck, 1);
+      var numToDraw;
+      if($("#draw").html() === "DRAW!") {
+        numToDraw = 1;
+      } else {
+        numToDraw = 4;
+      }
+      var redCardPromise = card.draw(cards.redDeck, numToDraw);
+      var blueCardPromise = card.draw(cards.blueDeck, numToDraw);
       redCardPromise.then(function(redCard) {
         blueCardPromise.then(function(blueCard) {
           var bothCards = {};
