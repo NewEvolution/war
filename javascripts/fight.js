@@ -36,6 +36,7 @@ define(function(require) {
         qualifier = "beats";
         wonCards = [];
         if(bothCards.redCard.remaining === 0) {
+          score.addScore(wonCards, "done");
           $("#draw").addClass("hidden");
           $("#wartext, #win-announcement").removeClass("invisible");
           $("#newgame, #resume, #stats").removeClass("hidden");
@@ -47,6 +48,7 @@ define(function(require) {
         qualifier = "is beaten by";
         wonCards = [];
         if(bothCards.blueCard.remaining === 0) {
+          score.addScore(wonCards, "done");
           $("#draw").addClass("hidden");
           $("#wartext, #win-announcement").removeClass("invisible");
           $("#newgame, #resume, #stats").removeClass("hidden");
@@ -58,6 +60,8 @@ define(function(require) {
         qualifier = "wars with";
         if(bothCards.redCard.remaining === 0) {
           score.addScore(wonCards, "both");
+          wonCards = [];
+          score.addScore(wonCards, "done");
           qualifier = "ties with";
           $("#draw").addClass("hidden");
           $("#win-announcement").removeClass("invisible");

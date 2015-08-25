@@ -16,11 +16,13 @@ define(function(require) {
         } else if(color === "blue") {
           theBlueScore += scoreToAdd;
           theGame.update({blueScore: theBlueScore});
-        } else {
+        } else if (color === "both"){
           theRedScore += scoreToAdd / 2;
           theBlueScore += scoreToAdd / 2;
           theGame.update({redScore: theRedScore});
           theGame.update({blueScore: theBlueScore});
+        } else {
+          theGame.update({completed: true});
         }
       });
     }
