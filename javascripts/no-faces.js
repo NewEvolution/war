@@ -5,15 +5,15 @@ define(function(require) {
       for(var key in bothCards) {
         var cardValue = bothCards[key].cards[0].value;
         if(cardValue === "ACE") {
-          cardValue = 14;
+          cardValue = [14, "Ace"];
         } else if(cardValue === "KING") {
-          cardValue = 13;
+          cardValue = [13, "King"];
         } else if(cardValue === "QUEEN") {
-          cardValue = 12;
+          cardValue = [12, "Queen"];
         } else if(cardValue === "JACK") {
-          cardValue = 11;
+          cardValue = [11, "Jack"];
         } else {
-          cardValue = parseInt(cardValue);
+          cardValue = [parseInt(cardValue)];
         }
         bothCards[key].cards[0].value = cardValue; 
       }
