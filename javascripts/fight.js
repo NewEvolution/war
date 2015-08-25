@@ -79,7 +79,7 @@ define(function(require) {
       } else if(redScore < blueScore) {
         winQualifier = "was defeated by";
       } else {
-        winQualifier = "stalemates with";
+        winQualifier = "stalemated with";
       }
     });
     $("#qualifier").html(qualifier);
