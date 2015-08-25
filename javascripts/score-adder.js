@@ -5,19 +5,22 @@ define(function(require) {
   return {
     addScore: function(cardArr, color) {
       var scoreToAdd = cardArr.length;
+      console.log("scoreToAdd", scoreToAdd);
       var theGame = gameRef.getGameRef();
       theGame.once("value", function(snapshot) {
-        var theScore;
-        var newScore;
+          var theRedScore = snapshot.child("redScore").val();
+          var theBlueScore = snapshot.child("blueScore").val();
         if(color === "red") {
-          theScore = snapshot.child("redScore").val();
-          newScore = theScore + scoreToAdd;
-          theGame.update({redScore: newScore});
-        }
-        if(color === "blue") {
-          theScore = snapshot.child("blueScore").val();
-          newScore = theScore + scoreToAdd;
-          theGame.update({blueScore: newScore});
+          theRedScore += scoreToAdd;
+          theGame.update({redScore: theRedScore});
+        } else if(color === "blue") {
+          theBlueScore += scoreToAdd;
+          theGame.update({blueScore: theBlueScore});
+        } else {
+          theRedScore += scoreToAdd / 2;
+          theBlueScore += scoreToAdd / 2;
+          theGame.update({redScore: theRedScore});
+          theGame.update({blueScore: theBlueScore});
         }
       });
     }

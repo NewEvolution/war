@@ -1,4 +1,5 @@
 define(function(require) {
+  var wonCards = [];
   var $ = require("jquery");
   var gameRef = require("gameref");
   var score = require("score-adder");
@@ -9,10 +10,8 @@ define(function(require) {
       var theGame = gameRef.getGameRef();
       var redVal;
       var blueVal;
-      var redScore = 0;
-      var blueScore = 0;
       var qualifier;
-      var wonCards = [];
+      var winQualifier;
       for(var key in bothCards) {
         var cardMaxIndex = bothCards[key].cards.length - 1;
         $("#"+key+"-card").attr({src: bothCards[key].cards[cardMaxIndex].image, alt: bothCards[key].cards[cardMaxIndex].code});
@@ -34,22 +33,54 @@ define(function(require) {
       }
       if(redVal > blueVal) {
         score.addScore(wonCards, "red");
-        $("#draw").html("DRAW!");
         qualifier = "beats";
+        wonCards = [];
+        if(bothCards.redCard.remaining === 0) {
+          $("#draw").addClass("hidden");
+          $("#wartext, #win-announcement").removeClass("invisible");
+          $("#newgame, #resume, #stats").removeClass("hidden");
+        } else {
+          $("#draw").html("DRAW!");
+        }
       } else if(redVal < blueVal) {
         score.addScore(wonCards, "blue");
-        $("#draw").html("DRAW!");
         qualifier = "is beaten by";
+        wonCards = [];
+        if(bothCards.blueCard.remaining === 0) {
+          $("#draw").addClass("hidden");
+          $("#wartext, #win-announcement").removeClass("invisible");
+          $("#newgame, #resume, #stats").removeClass("hidden");
+        } else {
+          $("#draw").html("DRAW!");
+        }
       } else if(redVal === blueVal) {
         $("#wartext").removeClass("invisible");
-        $("#draw").html("WAR!");
         qualifier = "wars with";
+        if(bothCards.redCard.remaining === 0) {
+          score.addScore(wonCards, "both");
+          qualifier = "ties with";
+          $("#draw").addClass("hidden");
+          $("#win-announcement").removeClass("invisible");
+          $("#newgame, #resume, #stats").removeClass("hidden");
+        } else {
+          $("#draw").html("WAR!");
+        }
       }
       theGame.on("value", function(snapshot) {
-        $("#redCard-score").html(snapshot.child("redScore").val());
-        $("#blueCard-score").html(snapshot.child("blueScore").val());
+        redScore = snapshot.child("redScore").val();
+        blueScore = snapshot.child("blueScore").val();
+        $("#redCard-score").html(redScore);
+        $("#blueCard-score").html(blueScore);
+        if(redScore > blueScore) {
+          winQualifier = "has defeated";
+        } else if(redScore < blueScore) {
+          winQualifier = "was defeated by";
+        } else {
+          winQualifier = "is at a stalemate with";
+        }
       });
       $("#qualifier").html(qualifier);
+      $("#win-qualifier").html(winQualifier);
       $("#battle-result").removeClass("invisible");
     }
   };

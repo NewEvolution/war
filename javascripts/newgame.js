@@ -10,6 +10,7 @@ define(function(require) {
   $("#newgame").click(function(e) {
     $(".red-card").addClass("hidden");
     $(".blue-card").addClass("hidden");
+    $("#win-announcement").addClass("invisible");
     var blueDeck = deck.newDeck();
     var redDeck = deck.newDeck();
     var thisGame = {};
@@ -23,9 +24,7 @@ define(function(require) {
         var cardbaseRef = new Firebase("https://nss-card-war.firebaseio.com/");
         var theGame = cardbaseRef.child("games").push(thisGame);
         gameRef.setGameRef(theGame);
-        $("#newgame").addClass("hidden");
-        $("#resume").addClass("hidden");
-        $("#stats").addClass("hidden");
+        $("#newgame, #resume, #stats").addClass("hidden");
         $("#draw").removeClass("hidden");
       });
     });

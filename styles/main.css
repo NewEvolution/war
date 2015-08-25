@@ -56,19 +56,29 @@ body {
 .h {
   right: 105px; }
 
+#battle-result,
+#win-announcement {
+  text-shadow: 1px 1px 2px #141414;
+  background-color: rgba(125, 125, 125, 0.5);
+  border-radius: 10px; }
+
 #battle-result {
   margin-bottom: 1em;
   font-size: 2.5em; }
-  #battle-result #redCard-name {
-    color: red;
-    text-shadow: 1px 1px 2px white;
-    font-weight: bold; }
-  #battle-result #blueCard-name {
-    color: blue;
-    text-shadow: 1px 1px 2px white;
-    font-weight: bold; }
-  #battle-result #qualifier {
-    text-shadow: 1px 1px 2px #141414; }
+
+#win-announcement {
+  margin: 30px 0 0;
+  font-size: 2.3em; }
+
+#redCard-name,
+.redtext {
+  color: #d90f0f;
+  font-weight: bold; }
+
+#blueCard-name,
+.bluetext {
+  color: #18256a;
+  font-weight: bold; }
 
 .score {
   position: absolute;
@@ -77,16 +87,11 @@ body {
   font-weight: bold; }
 
 #redCard-score {
-  color: red;
+  color: #d90f0f;
   text-shadow: 1px 1px 2px white; }
 
 #blueCard-score {
-  color: blue;
+  color: #18256a;
   text-shadow: 1px 1px 2px white; }
-
-#win-announcement {
-  margin: 30px 0;
-  font-weight: bold;
-  font-size: 3em; }
 
 /*# sourceMappingURL=main.css.map */
