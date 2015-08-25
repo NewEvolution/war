@@ -4,7 +4,14 @@ define(function(require) {
   var currentPlayer = uid.getUid();
   return function(cardbaseRef) {
     cardbaseRef.child("games").orderByChild("player").equalTo(currentPlayer).once("value", function(snapshot) {
-      console.log(snapshot.val());
+      var gamesObj = snapshot.val();
+      var unfinishedGamesObj = {};
+      for(var uuid in gamesObj) {
+        if(!gamesObj[uuid].completed) {
+          unfinishedGamesObj[uuid] = gamesObj[uuid];
+        }
+      }
+      console.log("unfinishedGamesObj", unfinishedGamesObj);
     });
   };
 });
