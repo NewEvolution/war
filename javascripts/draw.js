@@ -1,8 +1,8 @@
 define(function(require) {
   var Q = require("q");
   var $ = require("jquery");
-  var faces = require("no-faces");
-  var card = require("draw-card");
+  var deface = require("no-faces");
+  var draw = require("draw-card");
   var gameRef = require("gameref");
 
   $("#draw").click(function(e) {
@@ -30,14 +30,14 @@ define(function(require) {
         $(".blue-card").removeClass("hidden");
         numToDraw = 4;
       }
-      var redCardPromise = card.draw(cards.redDeck, numToDraw);
-      var blueCardPromise = card.draw(cards.blueDeck, numToDraw);
+      var redCardPromise = draw(cards.redDeck, numToDraw);
+      var blueCardPromise = draw(cards.blueDeck, numToDraw);
       redCardPromise.then(function(redCard) {
         blueCardPromise.then(function(blueCard) {
           var bothCards = {};
           bothCards.redCard = redCard;
           bothCards.blueCard = blueCard;
-          faces.deface(bothCards);
+          deface(bothCards);
         });
       });
     });

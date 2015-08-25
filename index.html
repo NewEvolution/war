@@ -8,6 +8,24 @@
     <title>Nashville Software School</title>
   </head>
   <body>
+    <!-- Resume Modal -->
+    <div class="modal fade" id="resume-modal" tabindex="-1" role="dialog" aria-labelledby="resume-label">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="resume-label">Resume an Incomplete Game</h4>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Resume Modal -->
     <div class="container-flow">
       <div class="row">
         <div id="redCard-player" class="col-xs-4">
@@ -28,7 +46,7 @@
           <div id="button-holder">
             <button id="draw" class="btn btn-default hidden">DRAW!</button>
             <button id="newgame" class="btn btn-default">&nbsp;&nbsp;&nbsp;New Game&nbsp;&nbsp;&nbsp;</button>
-            <button id="resume" class="btn btn-default">Resume Game</button>
+            <button id="resume" class="btn btn-default" data-toggle="modal" data-target="#resume-modal">Resume Game</button>
             <button id="stats" class="btn btn-default">&nbsp;&nbsp;Player Stats&nbsp;&nbsp;</button>
           </div>
           <div class="invisible" id="win-announcement">

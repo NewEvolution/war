@@ -10,6 +10,9 @@ body {
 .hidden {
   display: none; }
 
+.modal-content {
+  background-color: rgba(50, 50, 50, 0.8); }
+
 #wartext {
   color: black;
   font-weight: bold;
