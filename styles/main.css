@@ -1,7 +1,46 @@
 body {
-  text-align: center; }
+  text-align: center;
+  color: black; }
 
 .hidden {
   display: none; }
+
+#wartext {
+  font-weight: bold;
+  font-size: 10em;
+  text-shadow: 0 0 15px red, 0 0 15px red, 0 0 15px red; }
+
+#blueCard-card,
+#redCard-card {
+  position: absolute;
+  top: 2em; }
+
+#blueCard-card {
+  left: 30px;
+  -ms-transform: rotate(-10deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-10deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(-10deg); }
+
+#redCard-card {
+  right: 30px;
+  -ms-transform: rotate(10deg);
+  /* IE 9 */
+  -webkit-transform: rotate(10deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(10deg); }
+
+#battle-result {
+  margin-bottom: 1em;
+  font-size: 2.5em; }
+  #battle-result #redCard-name {
+    color: red;
+    text-shadow: 1px 1px 2px #141414;
+    font-weight: bold; }
+  #battle-result #blueCard-name {
+    color: blue;
+    text-shadow: 1px 1px 2px #141414;
+    font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */

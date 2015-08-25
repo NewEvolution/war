@@ -18,8 +18,8 @@ define(function(require) {
       deferred.resolve(cards);
     });
     cardsPromise.then(function(cards) {
-      var redCardPromise = card.draw(cards.redDeck);
-      var blueCardPromise = card.draw(cards.blueDeck);
+      var redCardPromise = card.draw(cards.redDeck, 1);
+      var blueCardPromise = card.draw(cards.blueDeck, 1);
       redCardPromise.then(function(redCard) {
         blueCardPromise.then(function(blueCard) {
           var bothCards = {};

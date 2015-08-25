@@ -10,24 +10,27 @@
   <body>
     <div class="container-flow">
       <div class="row">
-        <div id="red-player" class="col-xs-5">
+        <div id="redCard-player" class="col-xs-4">
           <!-- Red Player side -->
-          <img id="red-card" src="images/red-back.png" alt="Red card back">
+          <img id="redCard-card" src="images/red-back.png" alt="Red card back">
         </div>
-        <div id="battle-result" class="col-xs-2">
-          <div id="battle-result">
-            <!-- Result of the batle -->
-          </div>
+        <div class="col-xs-4">
           <div>
+            <p id="wartext">WAR!</p>
+            <div id="battle-result" class="invisible">
+              <span id="redCard-name">I</span> <span id="qualifier">I</span> <span id="blueCard-name">I</span>
+            </div>
+          </div>
+          <div id="button-holder">
             <button id="draw" class="btn btn-default hidden">DRAW!</button>
             <button id="newgame" class="btn btn-default">&nbsp;&nbsp;&nbsp;New Game&nbsp;&nbsp;&nbsp;</button>
             <button id="resume" class="btn btn-default">Resume Game</button>
             <button id="stats" class="btn btn-default">&nbsp;&nbsp;Player Stats&nbsp;&nbsp;</button>
           </div>
         </div>
-        <div id="blue-player" class="col-xs-5">
+        <div id="blueCard-player" class="col-xs-4">
           <!-- Blue Player side -->
-          <img id="blue-card" src="images/blue-back.png" alt="Blue card back">
+          <img id="blueCard-card" src="images/blue-back.png" alt="Blue card back">
         </div>
       </div>
     </div>
