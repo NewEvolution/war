@@ -1,10 +1,12 @@
 define(function(require) {
   var $ = require("jquery");
-  var pile = require("pile-adder");
+  var gameRef = require("gameref");
+  var score = require("score-adder");
   return {
     battle: function(bothCards) {
       console.log("red card", bothCards.redCard);
       console.log("blue card", bothCards.blueCard);
+      var theGame = gameRef.getGameRef();
       var redVal;
       var blueVal;
       var redScore = 0;
@@ -31,28 +33,22 @@ define(function(require) {
         }
       }
       if(redVal > blueVal) {
+        score.addScore(wonCards, "red");
         $("#draw").html("DRAW!");
         qualifier = "beats";
-        var redPromise = pile.addCards(wonCards, bothCards.redCard.deck_id);
-        redPromise.then(function(data) {
-          redScore = data.piles.winnings.remaining;
-          console.log("red win", data);
-          $("#redCard-score").html(redScore);
-        });
       } else if(redVal < blueVal) {
+        score.addScore(wonCards, "blue");
         $("#draw").html("DRAW!");
         qualifier = "is beaten by";
-        var bluePromise = pile.addCards(wonCards, bothCards.blueCard.deck_id);
-        bluePromise.then(function(data) {
-          blueScore = data.piles.winnings.remaining;
-          console.log("blue win", data);
-          $("#blueCard-score").html(blueScore);
-        });
       } else if(redVal === blueVal) {
         $("#wartext").removeClass("invisible");
         $("#draw").html("WAR!");
         qualifier = "wars with";
       }
+      theGame.on("value", function(snapshot) {
+        $("#redCard-score").html(snapshot.child("redScore").val());
+        $("#blueCard-score").html(snapshot.child("blueScore").val());
+      });
       $("#qualifier").html(qualifier);
       $("#battle-result").removeClass("invisible");
     }
