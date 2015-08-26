@@ -19,7 +19,7 @@ define(function(require) {
         $("#battle-result, #win-announcement").addClass("invisible");
         $("#redCard-score, #blueCard-score, #wartext").removeClass("invisible");
       }).fail(function(error) {
-        alert("The card decks associated with this game have expired.");
+        alert("Sorry, the card decks associated with this game have expired.");
         theGame.remove();
       });
     });
