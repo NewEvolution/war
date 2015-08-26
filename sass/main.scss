@@ -70,6 +70,11 @@ body {
   right: 105px;
 }
 
+.card {
+  box-shadow: 0 5px 10px black;
+  border-radius: 10px;
+}
+
 #battle-result,
 #win-announcement,
 .modal-row,
