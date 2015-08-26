@@ -8,25 +8,25 @@
     <title>Nashville Software School</title>
   </head>
   <body>
-    <!-- Resume Modal -->
-    <div class="modal fade" id="multi-modal" tabindex="-1" role="dialog" aria-labelledby="multi-label">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="multi-label"></h4>
-          </div>
-          <div id="multi-modal-content" class="modal-body">
-            <!-- via Handlebars -->
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+    <div class="container-flow">
+      <!-- Modal -->
+      <div class="modal fade" id="multi-modal" tabindex="-1" role="dialog" aria-labelledby="multi-label">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title" id="multi-label"></h4>
+            </div>
+            <div id="multi-modal-content" class="modal-body">
+              <!-- via Handlebars -->
+            </div>
+            <div class="modal-footer">
+              <button id="modal-close" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- End Resume Modal -->
-    <div class="container-flow">
+      <!-- End Modal -->
       <div class="row">
         <div id="redCard-player" class="col-xs-4">
           <!-- Red Player side -->
@@ -47,7 +47,7 @@
             <button id="draw" class="btn btn-default hidden">DRAW!</button>
             <button id="newgame" class="btn btn-default">&nbsp;&nbsp;&nbsp;New Game&nbsp;&nbsp;&nbsp;</button>
             <button id="resume" class="btn btn-default" data-toggle="modal" data-target="#multi-modal">Resume Game</button>
-            <button id="stats" class="btn btn-default">&nbsp;&nbsp;Player Stats&nbsp;&nbsp;</button>
+            <button id="stats" class="btn btn-default" data-toggle="modal" data-target="#multi-modal">&nbsp;&nbsp;Player Stats&nbsp;&nbsp;</button>
           </div>
           <div class="invisible" id="win-announcement">
             <span class="redtext">Red</span> <span id="win-qualifier"><!-- win text --></span> <span class="bluetext">Blue!</span>

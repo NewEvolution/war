@@ -1,14 +1,8 @@
-{{#if this}}
-  {{#each this}}
-    <div class="modal-row" id="{{@key}}">
-      <span class="left-spacing"></span>
-      <span class="resume-width">Red score: <span class="redtext">{{redScore}}</span></span>
-      <span class="resume-width">Blue score: <span class="bluetext">{{blueScore}}</span></span>
-      <button class="btn btn-success resume" data-dismiss="modal">Resume</button>
-    </div>
-  {{/each}}
-{{else}}
-  <div class="modal-row">
-    <h3>You do not have any unfinished games.</h3>
+{{#each this}}
+  <div class="modal-row" id="{{@key}}">
+    <span class="left-spacing"></span>
+    <span class="resume-width">Red score: <span class="redtext">{{redScore}}</span></span>
+    <span class="resume-width">Blue score: <span class="bluetext">{{blueScore}}</span></span>
+    <button class="btn btn-success resume" data-dismiss="modal">Resume</button>
   </div>
-{{/if}}
+{{/each}}

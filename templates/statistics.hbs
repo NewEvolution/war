@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-xs-4">
+    <div class="score-area">
+      <div class="redtext">{{wins.redWins}}</div>
+      <p>Red Wins</p>
+      <p><span class="redtext">{{wins.redTotal}}</span> points</p>
+    </div>
+  </div>
+  <div class="col-xs-4">
+    <div class="score-area">
+      <div class="graytext">{{wins.stalemates}}</div>
+      <p>Stalemates</p>
+    </div>
+  </div>
+  <div class="col-xs-4">
+    <div class="score-area">
+      <div class="bluetext">{{wins.blueWins}}</div>
+      <p>Blue Wins</p>
+      <p><span class="bluetext">{{wins.blueTotal}}</span> points</p>
+    </div>
+  </div>
+</div>
+<hr>
+{{#each games}}
+  <div class="modal-row">
+    <span class="match-number">{{@index}}</span>
+    <span class="resume-width">Red score: <span class="redtext">{{redScore}}</span></span>
+    <span class="resume-width">Blue score: <span class="bluetext">{{blueScore}}</span></span>
+  </div>
+{{/each}}

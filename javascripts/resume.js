@@ -9,8 +9,11 @@ define(function(require) {
       $("#redCard-score").html(snapshot.child("redScore").val());
       $("#blueCard-score").html(snapshot.child("blueScore").val());
     });
-    $("#redCard-score, #blueCard-score").removeClass("invisible");
-    $("#newgame, #resume, #stats").addClass("hidden");
     $("#draw").removeClass("hidden");
+    $("#newgame, #resume, #stats").addClass("hidden");
+    $("#redCard-card").attr({src: "images/red-back.png"});
+    $("#blueCard-card").attr({src: "images/blue-back.png"});
+    $("#battle-result, #win-announcement").addClass("invisible");
+    $("#redCard-score, #blueCard-score").removeClass("invisible");
   });
 });

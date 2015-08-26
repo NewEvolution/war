@@ -72,10 +72,23 @@ body {
 
 #battle-result,
 #win-announcement,
-#multi-modal-content div {
+.modal-row,
+.score-area {
   text-shadow: 1px 1px 2px rgba(20,20,20,1);
   background-color: rgba(125,125,125,0.5);
   border-radius: 10px;
+}
+
+.score-area {
+  height: 13em;
+  div {
+    font-size: 6em;
+    margin-bottom: -0.25em;
+  }
+  p {
+    font-size: 1.3em;
+    margin: 0.3em;
+  }
 }
 
 .modal-row {
@@ -92,17 +105,21 @@ body {
   }
   h3 {
     text-align: center;
+    padding: 10px 0;
+  }
+  .match-number {
+    display: inline-block;
+    width: 6em;
+    padding-left: 20px;
   }
 }
 
 #battle-result {
-  @extend #battle-result;
   margin-bottom: 1em;
   font-size: 2.5em;
 }
 
 #win-announcement {
-  @extend #win-announcement;
   margin: 30px 0 0;
   font-size: 2.3em;
 }
