@@ -4,7 +4,7 @@ define(function(require) {
   return function(deckID) {
     var deferred = Q.defer();
     $.ajax({
-      url: "http://deckofcardsapi.com/api/deck/" + deckID + "/shuffle/",
+      url: "http://deckofcardsapi.com/api/deck/" + deckID + "/pile/fakepile/add/?cards=AS,2S",
       method: "GET"
     }).done(function(data) {
       deferred.resolve(data);

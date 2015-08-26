@@ -1,5 +1,5 @@
 define(function(require) {
-  var shuffle = require("shuffle");
+  var valid = require("validity-check");
   var gameRef = require("gameref");
   $("#multi-modal-content").on("click", ".resume", function(e) {
     var gameToResume = $(this).parents(".modal-row").attr("id");
@@ -9,8 +9,8 @@ define(function(require) {
       $("#redCard-score").html(snapshot.child("redScore").val());
       $("#blueCard-score").html(snapshot.child("blueScore").val());
       var redDeckID = snapshot.child("redDeck").val();
-      var shufflePromise = shuffle(redDeckID);
-      shufflePromise.then(function(data) {
+      var validPromise = valid(redDeckID);
+      validPromise.then(function(data) {
         $("#draw").html("DRAW!");
         $("#draw").removeClass("hidden");
         $("#newgame, #resume, #stats").addClass("hidden");
