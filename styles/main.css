@@ -60,10 +60,22 @@ body {
   right: 105px; }
 
 #battle-result,
-#win-announcement {
+#win-announcement,
+#resume-modal-content div {
   text-shadow: 1px 1px 2px #141414;
   background-color: rgba(125, 125, 125, 0.5);
   border-radius: 10px; }
+
+.modal-row {
+  font-size: 1.5em;
+  margin: 10px 0;
+  text-align: left; }
+  .modal-row .left-spacing {
+    display: inline-block;
+    width: 4em; }
+  .modal-row .resume-width {
+    display: inline-block;
+    width: 8em; }
 
 #battle-result {
   margin-bottom: 1em;

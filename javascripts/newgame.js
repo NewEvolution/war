@@ -32,6 +32,10 @@ define(function(require) {
   });
 
   $("#resume").click(function(e) {
-    getGames(cardbaseRef);
+    getGames(cardbaseRef, "resume");
+  });
+
+  $("#stats").click(function(e) {
+    getGames(cardbaseRef, "stats");
   });
 });
