@@ -1,12 +1,11 @@
 define(function(require) {
-  var Q = require("q");
   var $ = require("jquery");
   var card = require("draw-card");
   var gameRef = require("gameref");
   var drawButton = require("draw");
+  var Game = require("game-maker");
   var newDeck = require("deck-getter");
   var getGames = require("get-games");
-  var Game = require("game-maker");
   var cardbaseRef = new Firebase("https://nss-card-war.firebaseio.com/");
   
   $("#newgame").click(function(e) {

@@ -15,8 +15,6 @@ define(function(require) {
           unfinishedGamesObj[uuid] = gamesObj[uuid];
         }
       }
-      console.log("unfinishedGamesObj", unfinishedGamesObj);
-      console.log("finishedGamesObj", finishedGamesObj);
       if(target === "stats") {
         $("#modal-close").html("Close");
         $("#multi-label").html("Your Statistics");
