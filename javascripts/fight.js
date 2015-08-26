@@ -37,7 +37,7 @@ define(function(require) {
       if(bothCards.redCard.remaining === 0) {
         addScore(wonCards, "done");
         $("#draw").addClass("hidden");
-        $("#wartext, #win-announcement").removeClass("invisible");
+        $("#win-announcement").removeClass("invisible");
         $("#newgame, #resume, #stats").removeClass("hidden");
       } else {
         $("#draw").html("DRAW!");
@@ -49,7 +49,7 @@ define(function(require) {
       if(bothCards.blueCard.remaining === 0) {
         addScore(wonCards, "done");
         $("#draw").addClass("hidden");
-        $("#wartext, #win-announcement").removeClass("invisible");
+        $("#win-announcement").removeClass("invisible");
         $("#newgame, #resume, #stats").removeClass("hidden");
       } else {
         $("#draw").html("DRAW!");

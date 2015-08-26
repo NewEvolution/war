@@ -11,7 +11,7 @@ define(function(require) {
   $("#newgame").click(function(e) {
     $(".red-card").addClass("hidden");
     $(".blue-card").addClass("hidden");
-    $("#win-announcement").addClass("invisible");
+    $("#win-announcement, #battle-result").addClass("invisible");
     var blueDeck = newDeck();
     var redDeck = newDeck();
     var thisGame = {};
@@ -25,7 +25,9 @@ define(function(require) {
         var theGame = cardbaseRef.child("games").push(thisGame);
         gameRef.setGameRef(theGame);
         $("#newgame, #resume, #stats").addClass("hidden");
+        $("#draw").html("DRAW!");
         $("#draw").removeClass("hidden");
+        $("#wartext").removeClass("invisible");
       });
     });
   });
