@@ -25,6 +25,9 @@ define(function(require) {
         var theGame = cardbaseRef.child("games").push(thisGame);
         gameRef.setGameRef(theGame);
         $("#newgame, #resume, #stats").addClass("hidden");
+        $("#redCard-score, #blueCard-score").addClass("invisible");
+        $("#redCard-card").attr({src: "images/red-back.png"});
+        $("#blueCard-card").attr({src: "images/blue-back.png"});
         $("#draw").html("DRAW!");
         $("#draw").removeClass("hidden");
         $("#wartext").removeClass("invisible");
