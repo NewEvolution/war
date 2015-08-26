@@ -61,7 +61,7 @@ body {
 
 #battle-result,
 #win-announcement,
-#resume-modal-content div {
+#multi-modal-content div {
   text-shadow: 1px 1px 2px #141414;
   background-color: rgba(125, 125, 125, 0.5);
   border-radius: 10px; }
@@ -76,6 +76,8 @@ body {
   .modal-row .resume-width {
     display: inline-block;
     width: 8em; }
+  .modal-row h3 {
+    text-align: center; }
 
 #battle-result {
   margin-bottom: 1em;

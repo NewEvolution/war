@@ -1,6 +1,6 @@
 define(function(require) {
   var uid = require("uid");
-  var gameRef = require("gameref");
+  var resume = require("resume");
   var templates = require("templates");
   var currentPlayer = uid.getUid();
   return function(cardbaseRef, target) {
@@ -18,7 +18,8 @@ define(function(require) {
       console.log("unfinishedGamesObj", unfinishedGamesObj);
       console.log("finishedGamesObj", finishedGamesObj);
       if(target === "resume") {
-        $("#resume-modal-content").html(templates.resume(unfinishedGamesObj));
+        $("#multi-label").html("Resume an Incomplete Game");
+        $("#multi-modal-content").html(templates.resume(unfinishedGamesObj));
       }
     });
   };
