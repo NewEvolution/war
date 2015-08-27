@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Enriqueta:400,700">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -21,7 +22,7 @@
               <!-- via Handlebars -->
             </div>
             <div class="modal-footer">
-              <button id="modal-close" type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+              <button id="modal-close" type="button" class="modal-button" data-dismiss="modal">Cancel</button>
             </div>
           </div>
         </div>
@@ -30,11 +31,11 @@
       <div class="row">
         <div id="redCard-player" class="col-xs-4">
           <!-- Red Player side -->
+          <span id="redCard-score" class="score invisible">0</span>
           <img class="card red-card h" src="images/red-back.png" alt="Red card back">
           <img class="card red-card g" src="images/red-back.png" alt="Red card back">
           <img class="card red-card f" src="images/red-back.png" alt="Red card back">
           <img class="card" id="redCard-card" src="images/red-back.png" alt="Red card back">
-          <span id="redCard-score" class="score invisible">0</span>
         </div>
         <div class="col-xs-4">
           <div>
@@ -44,10 +45,10 @@
             </div>
           </div>
           <div id="button-holder">
-            <button id="draw" class="btn btn-default hidden">DRAW!</button>
-            <button id="newgame" class="btn btn-default">&nbsp;&nbsp;&nbsp;New Game&nbsp;&nbsp;&nbsp;</button>
-            <button id="resume" class="btn btn-default" data-toggle="modal" data-target="#multi-modal">Resume Game</button>
-            <button id="stats" class="btn btn-default" data-toggle="modal" data-target="#multi-modal">&nbsp;&nbsp;Player Stats&nbsp;&nbsp;</button>
+            <button id="draw" class="button hidden">DRAW!</button>
+            <button id="newgame" class="button">&nbsp;&nbsp;&nbsp;New&nbsp;Game&nbsp;&nbsp;&nbsp;</button>
+            <button id="resume" class="button" data-toggle="modal" data-target="#multi-modal">Resume&nbsp;Game</button>
+            <button id="stats" class="button" data-toggle="modal" data-target="#multi-modal">&nbsp;&nbsp;Player&nbsp;Stats&nbsp;&nbsp;</button>
           </div>
           <div class="invisible" id="win-announcement">
             <span class="redtext">Red</span> <span id="win-qualifier"><!-- win text --></span> <span class="bluetext">Blue!</span>
@@ -55,11 +56,11 @@
         </div>
         <div id="blueCard-player" class="col-xs-4">
           <!-- Blue Player side -->
+          <span id="blueCard-score" class="score invisible">0</span>
           <img class="card blue-card d" src="images/blue-back.png" alt="Blue card back">
           <img class="card blue-card c" src="images/blue-back.png" alt="Blue card back">
           <img class="card blue-card b" src="images/blue-back.png" alt="Blue card back">
           <img class="card" id="blueCard-card" src="images/blue-back.png" alt="Blue card back">
-          <span id="blueCard-score" class="score invisible">0</span>
         </div>
       </div>
     </div>

@@ -47,7 +47,7 @@ define(function(require) {
         }
       } else if(target === "resume") {
         $("#modal-close").html("Cancel");
-        $("#multi-label").html("Resume an Incomplete Game");
+        $("#multi-label").html("Resume an Unfinished Game");
         if($.isEmptyObject(unfinishedGamesObj)) {
           $("#multi-modal-content").html('<div class="modal-row"> <h3>You do not have any unfinished games.</h3></div>');
         } else {

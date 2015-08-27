@@ -1,4 +1,5 @@
 body {
+  font-family: 'Enriqueta', serif;
   background: #222 url(../images/battle-bg.jpg) no-repeat 50% 50% fixed;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -13,37 +14,64 @@ body {
 .modal-content {
   background-color: rgba(50, 50, 50, 0.8); }
 
+.modal-button, .resume {
+  background-color: rgba(100, 100, 100, 0.8);
+  padding: 0 20px;
+  height: 3em;
+  border-radius: 10px;
+  margin: 0 0.2em;
+  border: none; }
+  .modal-button:hover, .resume:hover {
+    background-color: #777; }
+
+.modal-row, .stats-row {
+  font-size: 1.5em;
+  margin: 10px 0;
+  padding: 0 10px; }
+  .modal-row h3, .stats-row h3 {
+    padding: 10px; }
+
+.resume {
+  font-size: 0.7em; }
+  .resume:hover {
+    background-color: rgba(50, 125, 50, 0.8); }
+
+.score-area {
+  height: 14em; }
+  .score-area div {
+    font-size: 6em;
+    margin-bottom: -0.2em; }
+  .score-area p {
+    font-size: 1.3em;
+    margin: 0.3em; }
+
+.stats-row {
+  padding-bottom: 5px; }
+
 #wartext {
   color: black;
   font-weight: bold;
-  font-size: 10em;
+  font-size: 10vw;
   text-shadow: 0 0 15px red, 0 0 15px red, 0 0 15px red; }
 
-.blue-card,
-#blueCard-card {
-  position: absolute;
-  top: 2em;
-  left: 30px;
-  -ms-transform: rotate(-10deg);
-  /* IE 9 */
-  -webkit-transform: rotate(-10deg);
-  /* Chrome, Safari, Opera */
-  transform: rotate(-10deg); }
-
-.b {
-  left: 55px; }
-
-.c {
-  left: 80px; }
-
-.d {
-  left: 105px; }
+.button {
+  color: #d90f0f;
+  background-color: black;
+  padding: 0 1vw;
+  height: 3em;
+  border: none;
+  border-radius: 10px;
+  margin: 0.5em 0.2em;
+  box-shadow: 0 0 15px red; }
+  .button:hover, .button:focus {
+    outline: 0;
+    box-shadow: 0 0 15px red, 0 0 15px red, 0 0 15px red; }
 
 .red-card,
 #redCard-card {
   position: absolute;
   top: 2em;
-  right: 30px;
+  right: 1vw;
   -ms-transform: rotate(10deg);
   /* IE 9 */
   -webkit-transform: rotate(10deg);
@@ -51,59 +79,54 @@ body {
   transform: rotate(10deg); }
 
 .f {
-  right: 55px; }
+  right: 3vw; }
 
 .g {
-  right: 80px; }
+  right: 5vw; }
 
 .h {
-  right: 105px; }
+  right: 7vw; }
+
+.blue-card,
+#blueCard-card {
+  position: absolute;
+  top: 2em;
+  left: 1vw;
+  -ms-transform: rotate(-10deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-10deg);
+  /* Chrome, Safari, Opera */
+  transform: rotate(-10deg); }
+
+.b {
+  left: 3vw; }
+
+.c {
+  left: 5vw; }
+
+.d {
+  left: 7vw; }
 
 .card {
   box-shadow: 0 5px 10px black;
-  border-radius: 10px; }
+  border-radius: 10px;
+  width: 17vw; }
 
 #battle-result,
 #win-announcement,
 .modal-row,
+.stats-row,
 .score-area {
   text-shadow: 1px 1px 2px #141414;
   background-color: rgba(125, 125, 125, 0.5);
   border-radius: 10px; }
 
-.score-area {
-  height: 13em; }
-  .score-area div {
-    font-size: 6em;
-    margin-bottom: -0.25em; }
-  .score-area p {
-    font-size: 1.3em;
-    margin: 0.3em; }
-
-.modal-row {
-  font-size: 1.5em;
-  margin: 10px 0;
-  text-align: left; }
-  .modal-row .left-spacing {
-    display: inline-block;
-    width: 4em; }
-  .modal-row .resume-width {
-    display: inline-block;
-    width: 8em; }
-  .modal-row h3 {
-    text-align: center;
-    padding: 10px 0; }
-  .modal-row .match-number {
-    display: inline-block;
-    width: 6em;
-    padding-left: 20px; }
-
 #battle-result {
-  margin-bottom: 1em;
-  font-size: 2.5em; }
+  margin-bottom: 2vw;
+  font-size: 2.3em; }
 
 #win-announcement {
-  margin: 30px 0 0;
+  margin-top: 2vw;
   font-size: 2.3em; }
 
 #redCard-name,
@@ -113,27 +136,24 @@ body {
 
 #blueCard-name,
 .bluetext {
-  color: #18256a;
+  color: #2828c8;
   font-weight: bold; }
 
 .score {
+  z-index: 99;
   position: absolute;
-  top: 350px;
-  font-size: 6em;
+  top: 25vw;
+  font-size: 9vw;
   font-weight: bold; }
 
 #redCard-score {
-  right: 2em; }
-
-#blueCard-score {
-  left: 2em; }
-
-#redCard-score {
+  right: 12vw;
   color: #d90f0f;
   text-shadow: 1px 1px 2px white; }
 
 #blueCard-score {
-  color: #18256a;
+  left: 12vw;
+  color: #2828c8;
   text-shadow: 1px 1px 2px white; }
 
 /*# sourceMappingURL=main.css.map */

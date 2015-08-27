@@ -22,9 +22,16 @@
 </div>
 <hr>
 {{#each games}}
-  <div class="modal-row">
-    <span class="match-number">{{@index}}</span>
-    <span class="resume-width">Red score: <span class="redtext">{{redScore}}</span></span>
-    <span class="resume-width">Blue score: <span class="bluetext">{{blueScore}}</span></span>
+  <div class="stats-row row">
+    <div class="col-sm-1">
+      <span class="match-number">{{@index}}</span>
+    </div>
+    <div class="col-xs-6 col-sm-5">
+      <span class="resume-width">Red score: <span class="redtext">{{redScore}}</span></span>
+    </div>
+    <div class="col-xs-6 col-sm-5">
+      <span class="resume-width">Blue score: <span class="bluetext">{{blueScore}}</span></span>
+    </div>
+    <div class="col-sm-1"></div>
   </div>
 {{/each}}
