@@ -1,6 +1,6 @@
 {
-  "name": "trippin",
-  "version": "0.0.0",
+  "name": "WAR",
+  "version": "1.0.0",
   "authors": [
     "Ryan Tanay <ryantanay@newevolution.org>"
   ],
@@ -19,7 +19,6 @@
     "requirejs": "~2.1.20",
     "lodash": "~3.10.1",
     "firebase": "~2.2.9",
-    "q": "1.0.1",
-    "jquery-ui": "~1.11.4"
+    "q": "1.0.1"
   }
 }

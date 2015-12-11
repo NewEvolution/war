@@ -21,7 +21,8 @@ define(function(require) {
       redDeck.then(function(data) {
         newGame.redDeck = data.deck_id;
         thisGame = new Game(newGame.redDeck, newGame.blueDeck);
-        console.log("thisGame", thisGame);
+        //debugging log
+        //console.log("thisGame", thisGame);
         var theGame = cardbaseRef.child("games").push(thisGame);
         gameRef.setGameRef(theGame);
         $("#newgame, #resume, #stats").addClass("hidden");

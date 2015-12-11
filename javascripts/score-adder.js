@@ -4,7 +4,8 @@ define(function(require) {
   var gameRef = require("gameref");
   return function(cardArr, color) {
     var scoreToAdd = cardArr.length;
-    console.log("scoreToAdd", scoreToAdd);
+    //debugging log
+    //console.log("scoreToAdd", scoreToAdd);
     var theGame = gameRef.getGameRef();
     theGame.once("value", function(snapshot) {
         var theRedScore = snapshot.child("redScore").val();

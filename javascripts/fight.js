@@ -4,8 +4,9 @@ define(function(require) {
   var gameRef = require("gameref");
   var addScore = require("score-adder");
   return function(bothCards) {
-    console.log("red card", bothCards.redCard);
-    console.log("blue card", bothCards.blueCard);
+    //debugging logs
+    //console.log("red card", bothCards.redCard);
+    //console.log("blue card", bothCards.blueCard);
     var theGame = gameRef.getGameRef();
     var redVal;
     var blueVal;
