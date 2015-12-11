@@ -5,7 +5,7 @@ The card game war, made single-player.  Using the Deck of [Cards API](http://dec
 Utilizes [Firebase](https://www.firebase.com) for user statistic tracking & authentication.
 
 ###Requirements:
-- Node.js https://nodejs.org/en/
+- [Node.js](https://nodejs.org/en/)
 - Installation of http-server via _npm install -g http-server_
 - A Github account
 
