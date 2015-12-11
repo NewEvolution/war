@@ -1,8 +1,8 @@
 #WAR!
 
-The card game war, made single-player.  Using the Deck of Cards API: http://deckofcardsapi.com/
+The card game war, made single-player.  Using the Deck of [Cards API](http://deckofcardsapi.com/)
 
-Utilizes Firebase (https://www.firebase.com) for user statistic tracking & authentication.
+Utilizes [Firebase](https://www.firebase.com) for user statistic tracking & authentication.
 
 ###Requirements:
 - Node.js https://nodejs.org/en/
