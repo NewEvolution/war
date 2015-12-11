@@ -1,6 +1,6 @@
 #WAR!
 
-The card game war, slightly modified.  Using the Deck of Cards API: http://deckofcardsapi.com/
+The card game war, made single-player.  Using the Deck of Cards API: http://deckofcardsapi.com/
 
 Utilizes Firebase (https://www.firebase.com) for user statistic tracking & authentication.
 
@@ -24,7 +24,7 @@ Utilizes Firebase (https://www.firebase.com) for user statistic tracking & authe
 
 ####To use the uncompiled development scripts:
 - Uncomment line 68 in _index.html_
-- Comment out lines 69 & 70 in _index.html_
+- Comment out lines 69 & 70 in _index.html_g
 - Inside the _lib_ directory:
  - Run _npm install_
  - Run _bower install_
