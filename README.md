@@ -2,7 +2,7 @@
 
 The card game war, slightly modified.  Using the Deck of Cards API: http://deckofcardsapi.com/
 
-Utilizes Firebase (https://www.firebase.com) for user statistic tracking.
+Utilizes Firebase (https://www.firebase.com) for user statistic tracking & authentication.
 
 ###Requirements:
 - Node.js https://nodejs.org/en/
@@ -10,13 +10,10 @@ Utilizes Firebase (https://www.firebase.com) for user statistic tracking.
 - A Github account
 
 ###Post Cloning Your Fork Locally:
-- Inside the _lib_ directory:
-  - Run _npm install_
-  - Run _bower install_
 - Inside the main repo directory:
  - Run _http-server_
  - Make note of the port number returned after running _http-server_
-- Navigate to http://localhost:[your-port-number]
+- In a web browser, navigate to http://localhost:[your-port-number]
 
 ###Usage:
 - Authenticate with Github
@@ -24,3 +21,10 @@ Utilizes Firebase (https://www.firebase.com) for user statistic tracking.
 - Click *Resume Game* to resume an unfinished game
 - Click *Player Stats* to view your all time win/loss record
 - In-game, click *DRAW!* to draw a new card for each hand
+
+####To use the uncompiled development scripts:
+- Uncomment line 68 in _index.html_
+- Comment out lines 69 & 70 in _index.html
+- Inside the _lib_ directory:
+ - Run _npm install_
+ - Run _bower install_
