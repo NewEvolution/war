@@ -24,7 +24,7 @@ Utilizes Firebase (https://www.firebase.com) for user statistic tracking & authe
 
 ####To use the uncompiled development scripts:
 - Uncomment line 68 in _index.html_
-- Comment out lines 69 & 70 in _index.html
+- Comment out lines 69 & 70 in _index.html_
 - Inside the _lib_ directory:
  - Run _npm install_
  - Run _bower install_
