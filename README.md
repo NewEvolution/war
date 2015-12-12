@@ -23,8 +23,8 @@ Utilizes [Firebase](https://www.firebase.com) for user statistic tracking & auth
 - In-game, click *DRAW!* to draw a new card for each hand
 
 ####To use the uncompiled development scripts:
-- Uncomment line 68 in _index.html_
-- Comment out lines 69 & 70 in _index.html_g
+- Uncomment lines 4 & 68 in _index.html_
+- Comment out lines 5, 69 & 70 in _index.html_g
 - Inside the _lib_ directory:
  - Run _npm install_
  - Run _bower install_
