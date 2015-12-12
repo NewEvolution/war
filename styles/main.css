@@ -157,4 +157,11 @@ body {
   color: #2828c8;
   text-shadow: 1px 1px 2px white; }
 
+#footer {
+  position: absolute;
+  left: 30px;
+  bottom: 20px; }
+  #footer a {
+    color: #d90f0f; }
+
 /*# sourceMappingURL=main.css.map */
