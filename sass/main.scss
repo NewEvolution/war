@@ -73,6 +73,11 @@ body {
   text-shadow: 0 0 15px rgb(255,0,0), 0 0 15px rgb(255,0,0), 0 0 15px rgb(255,0,0);
 }
 
+.authentication {
+  font-size: 2vw;
+  text-shadow: 0 0 15px black, 0 0 15px black, 0 0 15px black;
+}
+
 .button {
   color: $red-color;
   background-color: black;

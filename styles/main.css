@@ -54,6 +54,10 @@ body {
   font-size: 10vw;
   text-shadow: 0 0 15px red, 0 0 15px red, 0 0 15px red; }
 
+.authentication {
+  font-size: 2vw;
+  text-shadow: 0 0 15px black, 0 0 15px black, 0 0 15px black; }
+
 .button {
   color: #d90f0f;
   background-color: black;

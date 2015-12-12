@@ -1,20 +1,31 @@
 define(function(require) {
-  var firebase = require("firebase");
   var uid = require("uid");
+  var $ = require("jquery");
+  var firebase = require("firebase");
   var ref = new Firebase("https://nss-card-war.firebaseio.com");
   var authData = ref.getAuth();
-  if(authData === null) {
-    ref.authWithOAuthPopup("github", function(error, authData) {
-      if (error) {
-        console.log("Login Failed!", error);
-      } else {
-        uid.setUid(authData.uid);
-        require(["newgame"], function() {});
-      }
-    },
-    {remember: "sessionOnly"});
-  } else {
+
+  if(authData !== null) {
+    $("#authentication").addClass("hidden");
+    $("#button-holder").removeClass("hidden");
     uid.setUid(authData.uid);
     require(["newgame"], function() {});
+  }
+
+  $(".auth").click(function() {
+    serviceAuth(this.id);
+  });
+
+  $("#logout").click(function() {
+    ref.unauth();
+    location.reload();
+  });
+
+  function serviceAuth(service) {
+    ref.authWithOAuthPopup(service, function(error, authData) {
+      if (authData) {
+        location.reload();
+      }
+    });
   }
 });

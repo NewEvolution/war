@@ -42,16 +42,25 @@
           <div>
             <p id="wartext">WAR!</p>
           </div>
-          <div id="button-holder">
+          <div id="button-holder" class="hidden">
             <button id="draw" class="button hidden">DRAW!</button>
             <button id="newgame" class="button">&nbsp;&nbsp;&nbsp;New&nbsp;Game&nbsp;&nbsp;&nbsp;</button>
             <button id="resume" class="button" data-toggle="modal" data-target="#multi-modal">Resume&nbsp;Game</button>
             <button id="stats" class="button" data-toggle="modal" data-target="#multi-modal">&nbsp;&nbsp;Player&nbsp;Stats&nbsp;&nbsp;</button>
+            <br>
+            <button id="logout" class="button">Logout</button>
+          </div>
+          <div id ="authentication">
+            <p class="authentication">Authenticate with:</p>
+            <button id="facebook" class="auth button">Facebook</button>
+            <button id="twitter" class="auth button">Twitter</button>
+            <button id="github" class="auth button">Github</button>
+            <button id="google" class="auth button">Google</button>
           </div>
           <div id="battle-result" class="invisible">
             <span id="redCard-name">I</span> <span id="qualifier">I</span> <span id="blueCard-name">I</span>
           </div>
-          <div class="invisible" id="win-announcement">
+          <div id="win-announcement" class="invisible">
             <span class="redtext">Red</span> <span id="win-qualifier"><!-- win text --></span> <span class="bluetext">Blue!</span>
           </div>
         </div>

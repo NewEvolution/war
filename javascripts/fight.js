@@ -39,7 +39,7 @@ define(function(require) {
         addScore(wonCards, "done");
         $("#draw").addClass("hidden");
         $("#win-announcement").removeClass("invisible");
-        $("#newgame, #resume, #stats").removeClass("hidden");
+        $("#newgame, #resume, #stats, #logout").removeClass("hidden");
       } else {
         $("#draw").html("DRAW!");
       }
@@ -51,7 +51,7 @@ define(function(require) {
         addScore(wonCards, "done");
         $("#draw").addClass("hidden");
         $("#win-announcement").removeClass("invisible");
-        $("#newgame, #resume, #stats").removeClass("hidden");
+        $("#newgame, #resume, #stats, #logout").removeClass("hidden");
       } else {
         $("#draw").html("DRAW!");
       }
@@ -65,7 +65,7 @@ define(function(require) {
         qualifier = "ties with";
         $("#draw").addClass("hidden");
         $("#win-announcement").removeClass("invisible");
-        $("#newgame, #resume, #stats").removeClass("hidden");
+        $("#newgame, #resume, #stats, #logout").removeClass("hidden");
       } else {
         $("#draw").html("WAR!");
       }

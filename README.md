@@ -7,7 +7,7 @@ Utilizes [Firebase](https://www.firebase.com) for user statistic tracking & auth
 ###Requirements:
 - [Node.js](https://nodejs.org/en/)
 - Installation of http-server via _npm install -g http-server_
-- A Github account
+- A Github, Facebook, Twitter or Google account
 
 ###Post Cloning Your Fork Locally:
 - Inside the main repo directory:
