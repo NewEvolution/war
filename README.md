@@ -16,7 +16,7 @@ Utilizes [Firebase](https://www.firebase.com) for user statistic tracking & auth
 - In a web browser, navigate to http://localhost:[your-port-number]
 
 ###Usage:
-- Authenticate with Github
+- Authenticate with Github Facebook Twitter or Google
 - Click *New Game* to start a new game of war
 - Click *Resume Game* to resume an unfinished game
 - Click *Player Stats* to view your all time win/loss record
