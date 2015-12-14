@@ -14,7 +14,11 @@ define(function(require) {
     var winQualifier;
     for(var key in bothCards) {
       var cardMaxIndex = bothCards[key].cards.length - 1;
-      $("#"+key+"-card").attr({src: bothCards[key].cards[cardMaxIndex].image, alt: bothCards[key].cards[cardMaxIndex].code});
+      var cardImageURL = bothCards[key].cards[cardMaxIndex].image;
+      if (cardImageURL === "http://deckofcardsapi.com/static/img/AD.png") {
+        cardImageURL = "images/aceofdiamonds.png";
+      }
+      $("#"+key+"-card").attr({src: cardImageURL, alt: bothCards[key].cards[cardMaxIndex].code});
       if(bothCards[key].cards[cardMaxIndex].value.length === 1) {
         $("#"+key+"-name").html(bothCards[key].cards[cardMaxIndex].value[0]);
       } else {

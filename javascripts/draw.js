@@ -1,8 +1,8 @@
 define(function(require) {
   var Q = require("q");
   var $ = require("jquery");
-  var deface = require("no-faces");
   var draw = require("draw-card");
+  var deface = require("no-faces");
   var gameRef = require("gameref");
 
   $("#draw").click(function(e) {
