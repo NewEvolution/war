@@ -12,7 +12,7 @@ requirejs.config({
   shim: {
     "bootstrap": ["jquery"],
     "firebase": {
-      exports: "Firebase"
+      exports: "firebase"
     }
   }
 });

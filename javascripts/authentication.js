@@ -24,7 +24,7 @@ define(function(require) {
       require(["newgame"], function() {});
     } else {
       $("#authentication").removeClass("hidden");
-      $("#button-holder").removeClass("hidden");
+      $("#button-holder").addClass("hidden");
       uid.setUid(null);
     }
   });
@@ -34,11 +34,11 @@ define(function(require) {
   });
 
   $("#logout").click(function() {
-    firebase.auth.signOut();
+    firebase.auth().signOut();
   });
 
   function serviceAuth(service) {
-    var provider = firebase.auth[service + "AuthProvider"]();
+    var provider = new firebase.auth[service + "AuthProvider"]();
     auth.signInWithPopup(provider).then(function(result) {
       uid.setUid(result.user.uid)
     }).catch(function(error) {
