@@ -7,7 +7,7 @@ define(function(require) {
   var newDeck = require("deck-getter");
   var getGames = require("get-games");
   var cardbaseRef = new Firebase("https://nss-card-war.firebaseio.com/");
-  
+
   $("#newgame").click(function(e) {
     $(".red-card").addClass("hidden");
     $(".blue-card").addClass("hidden");

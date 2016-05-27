@@ -15,7 +15,7 @@ define(function(require) {
         } else {
           cardValue = [parseInt(cardValue)];
         }
-        bothCards[key].cards[i].value = cardValue; 
+        bothCards[key].cards[i].value = cardValue;
       }
     }
     fight(bothCards);
