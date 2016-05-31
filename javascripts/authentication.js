@@ -3,12 +3,9 @@ define(function(require) {
   var $ = require("jquery");
   var firebase = require("firebase");
   var templates = require("templates");
-  firebase.initializeApp({
-    apiKey: "AIzaSyDeLlaGb81ju_M4LuCuRdgGeAWich_kk2Y",
-    authDomain: "nss-card-war.firebaseapp.com",
-    databaseURL: "https://nss-card-war.firebaseio.com",
-    storageBucket: "nss-card-war.appspot.com"
-  });
+  var fireconf = require("fireconf");
+
+  firebase.initializeApp(fireconf);
   var ref = firebase.database().ref();
   var auth = firebase.auth();
   var date = new Date();
