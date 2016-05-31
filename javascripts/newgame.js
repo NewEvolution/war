@@ -6,7 +6,9 @@ define(function(require) {
   var Game = require("game-maker");
   var newDeck = require("deck-getter");
   var getGames = require("get-games");
-  var cardbaseRef = new Firebase("https://nss-card-war.firebaseio.com/");
+  var fireconf = require("fireconf");
+
+  var cardbaseRef = fireconf.database().ref();
 
   $("#newgame").click(function(e) {
     $(".red-card").addClass("hidden");
@@ -21,8 +23,6 @@ define(function(require) {
       redDeck.then(function(data) {
         newGame.redDeck = data.deck_id;
         thisGame = new Game(newGame.redDeck, newGame.blueDeck);
-        //debugging log
-        //console.log("thisGame", thisGame);
         var theGame = cardbaseRef.child("games").push(thisGame);
         gameRef.setGameRef(theGame);
         $("#newgame, #resume, #stats, #logout").addClass("hidden");
