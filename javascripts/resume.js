@@ -1,9 +1,10 @@
 define(function(require) {
   var valid = require("validity-check");
   var gameRef = require("gameref");
+  var fireconf = require("fireconf");
   $("#multi-modal-content").on("click", ".resume", function(e) {
     var gameToResume = $(this).parents(".modal-row").attr("id");
-    var theGame = new Firebase("https://nss-card-war.firebaseio.com/games/" + gameToResume + "/");
+    var theGame = fireconf.database().ref("games/" + gameToResume);
     gameRef.setGameRef(theGame);
     theGame.once("value", function(snapshot) {
       $("#redCard-score").html(snapshot.child("redScore").val());
